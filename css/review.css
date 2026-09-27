@@ -1,0 +1,347 @@
+
+
+body {
+    margin: 0;
+
+    background-image: url("../css/im/bc06.gif");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   พื้นที่รีวิว
+========================= */
+
+.review-container {
+
+    width: 90%;
+
+    max-width: 800px;
+
+    margin: 100px auto 60px;
+
+}
+
+
+/* =========================
+   หัวข้อ
+========================= */
+
+.review-container h1 {
+
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.review-subtitle {
+
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================
+   กล่องเขียนรีวิว
+========================= */
+
+.review-box {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.1);
+
+}
+
+
+/* =========================
+   Label
+========================= */
+
+.review-box label {
+
+    display: block;
+
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================
+   Input
+========================= */
+
+.review-box input[type="text"],
+.review-box select,
+.review-box textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+
+    font-family: inherit;
+
+}
+
+
+.review-box textarea {
+
+    resize: vertical;
+
+}
+
+
+/* =========================
+   ดาว
+========================= */
+
+.stars {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin: 5px 0 10px;
+
+}
+
+
+.stars span {
+
+    font-size: 38px;
+
+    color: #ddd;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.stars span:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+.stars span.active {
+
+    color: #ffc107;
+
+}
+
+
+/* =========================
+   อัปโหลดรูป
+========================= */
+
+.review-box input[type="file"] {
+
+    width: 100%;
+
+    padding: 10px;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =========================
+   ปุ่มส่งรีวิว
+========================= */
+
+.submit-review {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #ff6f91;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.submit-review:hover {
+
+    background: #ff4f79;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================
+   รีวิวลูกค้า
+========================= */
+
+.reviews-section {
+
+    margin-top: 50px;
+
+}
+
+
+.reviews-section h2 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================
+   รีวิวแต่ละอัน
+========================= */
+
+.review-item {
+
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.08);
+
+}
+
+
+.review-name {
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+}
+
+
+.review-product {
+
+    color: #777;
+
+    font-size: 14px;
+
+    margin: 5px 0;
+
+}
+
+
+.review-stars {
+
+    color: #ffc107;
+
+    font-size: 20px;
+
+    margin: 5px 0;
+
+}
+
+
+.review-message {
+
+    margin-top: 10px;
+
+    line-height: 1.6;
+
+}
+
+
+.review-image {
+
+    width: 150px;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    margin-top: 15px;
+
+}
+
+
+/* =========================
+   มือถือ
+========================= */
+
+@media (max-width: 600px) {
+
+    .review-container {
+
+        margin-top: 70px;
+
+    }
+
+    .review-box {
+
+        padding: 20px;
+
+    }
+
+    .review-container h1 {
+
+        font-size: 26px;
+
+    }
+
+}

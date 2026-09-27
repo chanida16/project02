@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>เขียนรีวิว</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/review.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- เมนู -->
+    <div id="menu-container"></div>
+
+
+    <!-- =========================
+         หน้ารีวิว
+    ========================== -->
+
+    <main class="review-container">
+
+
+        <h1>
+             เขียนรีวิวสินค้า
+        </h1>
+
+
+        <p class="review-subtitle">
+            บอกความคิดเห็นของคุณเกี่ยวกับสินค้า
+        </p>
+
+
+
+        <!-- กล่องเขียนรีวิว -->
+
+        <div class="review-box">
+
+
+            <!-- ชื่อ -->
+
+            <label>
+                ชื่อผู้รีวิว
+            </label>
+
+            <input
+                type="text"
+                id="review-name"
+                placeholder="กรอกชื่อของคุณ">
+
+
+
+            <!-- เลือกสินค้า -->
+
+            <label>
+                สินค้า
+            </label>
+
+            <select id="review-product">
+
+                <option value="">
+                    -- เลือกสินค้า --
+                </option>
+
+                <option>
+                    เสื้อแฟชั่น
+                </option>
+
+                <option>
+                    เสื้อแฟชั่นสีขาว
+                </option>
+
+                <option>
+                    เสื้อแฟชั่นชมพู
+                </option>
+
+                <option>
+                    กระเป๋าแฟชั่น
+                </option>
+
+                <option>
+                    กระเป๋าสะพาย
+                </option>
+
+                <option>
+                    กระเป๋าถือ
+                </option>
+
+                <option>
+                    รองเท้าแฟชั่น
+                </option>
+
+                <option>
+                    รองเท้าผ้าใบ
+                </option>
+
+                <option>
+                    รองเท้าลำลอง
+                </option>
+
+                <option>
+                    เครื่องประดับแฟชั่น
+                </option>
+
+                <option>
+                    สร้อยคอแฟชั่น
+                </option>
+
+                <option>
+                    กำไลแฟชั่น
+                </option>
+
+            </select>
+
+
+
+            <!-- คะแนน -->
+
+            <label>
+                ให้คะแนน
+            </label>
+
+
+            <div class="stars">
+
+                <span onclick="selectStar(1)">★</span>
+                <span onclick="selectStar(2)">★</span>
+                <span onclick="selectStar(3)">★</span>
+                <span onclick="selectStar(4)">★</span>
+                <span onclick="selectStar(5)">★</span>
+
+            </div>
+
+
+
+            <!-- ข้อความ -->
+
+            <label>
+                รีวิวของคุณ
+            </label>
+
+            <textarea
+                id="review-text"
+                placeholder="เขียนความคิดเห็นของคุณที่นี่..."
+                rows="6">
+            </textarea>
+
+
+
+            <!-- รูป -->
+
+            <label>
+                เพิ่มรูปภาพ
+            </label>
+
+            <input
+                type="file"
+                id="review-image"
+                accept="image/*">
+
+
+
+            <!-- ปุ่ม -->
+
+            <button
+                class="submit-review"
+                onclick="submitReview()">
+
+                 ส่งรีวิว
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             รีวิวที่แสดง
+        ========================== -->
+
+        <section class="reviews-section">
+
+
+            <h2>
+                รีวิวจากลูกค้า
+            </h2>
+
+
+            <div id="review-list">
+
+                <!-- รีวิวจะเพิ่มตรงนี้ -->
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <div id="footer"></div>
+
+
+
+    <script src="js/review.js"></script>
+
+    <script src="js/memu.js"></script>
+
+
+</body>
+
+</html>

@@ -1,257 +1,970 @@
-
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>ร้านค้า</title>
 
-    <!-- เชื่อม CSS -->
-  <link rel="stylesheet" href="css/shop.css">
+    <!-- CSS หลัก -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS ร้านค้า -->
+    <link rel="stylesheet" href="css/shop.css">
+
 </head>
+
 
 <body>
 
+
     <!-- =========================
-         ส่วนหัวร้านค้า
+         เมนู
     ========================== -->
-    <header class="shop-header">
 
-        <div class="shop-title">
-            <h1>MY SHOP</h1>
-            <p>เลือกสินค้าที่คุณชอบ</p>
-        </div>
+    <div id="menu-container"></div>
 
-        <div class="cart">
-            🛒 <span id="cart-count">0</span>
-        </div>
-
-    </header>
 
 
     <!-- =========================
-         หมวดหมู่สินค้า
+         รถเข็น
     ========================== -->
+
+    <div class="cart">
+
+        🛒
+
+        <span id="cart-count">
+            0
+        </span>
+
+    </div>
+
+
+
+    <!-- =========================
+         หัวข้อ
+    ========================== -->
+
+    <div class="shop-title">
+
+        <h2 id="shop-title">
+            สินค้าแนะนำ
+        </h2>
+
+    </div>
+
+
+
+    <!-- =========================
+         หมวดหมู่
+    ========================== -->
+
     <nav class="categories">
 
-        <button class="category active">ทั้งหมด</button>
-        <button class="category">เสื้อผ้า</button>
-        <button class="category">กระเป๋า</button>
-        <button class="category">รองเท้า</button>
-        <button class="category">เครื่องประดับ</button>
+        <button
+            class="category active"
+            onclick="showCategory('all', this)">
+
+            ทั้งหมด
+
+        </button>
+
+
+        <button
+            class="category"
+            onclick="showCategory('clothes', this)">
+
+            เสื้อผ้า
+
+        </button>
+
+
+        <button
+            class="category"
+            onclick="showCategory('bag', this)">
+
+            กระเป๋า
+
+        </button>
+
+
+        <button
+            class="category"
+            onclick="showCategory('shoes', this)">
+
+            รองเท้า
+
+        </button>
+
+
+        <button
+            class="category"
+            onclick="showCategory('accessories', this)">
+
+            เครื่องประดับ
+
+        </button>
 
     </nav>
 
 
-    <!-- =========================
-         รายการสินค้า
-    ========================== -->
-    <main class="shop-container">
 
-        <h2>สินค้าแนะนำ</h2>
+    <!-- =========================
+         สินค้าทั้งหมด
+    ========================== -->
+
+    <main class="shop-container">
 
         <div class="product-grid">
 
 
-            <!-- สินค้า 1 -->
-            <div class="product-card">
 
-                <div class="product-image">
-                    <!-- เปลี่ยนชื่อรูปตรง src ได้เลย -->
-                    <img src="images/product1.jpg" alt="เสื้อแฟชั่น">
+            <!-- ==================================================
+                 เสื้อผ้า 1
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="clothes">
+
+                <img
+                    src="./css/im/d2.jpg"
+                    alt="เสื้อแฟชั่น">
+
+                <h3>
+                    
+                </h3>
+
+                <p class="price">
+                    ฿2,990
+                </p>
+
+
+                <div class="product-option">
+
+                   
+
+                   
                 </div>
 
-                <div class="product-info">
 
-                    <h3>เสื้อแฟชั่น</h3>
+                <div class="product-option">
 
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
-                    </div>
+                    <label>
+                        ไซซ์
+                    </label>
 
-                    <p class="price">฿299</p>
+                    <select>
 
-                    <p class="option-title">เลือกสี</p>
-
-                    <div class="colors">
-                        <span class="color black"></span>
-                        <span class="color white"></span>
-                        <span class="color pink"></span>
-                    </div>
-
-                    <p class="option-title">เลือกไซซ์</p>
-
-                    <select class="size">
                         <option>S</option>
                         <option>M</option>
                         <option>L</option>
                         <option>XL</option>
+
                     </select>
 
-                    <div class="quantity">
-                        <button onclick="minus(this)">−</button>
-                        <span>1</span>
-                        <button onclick="plus(this)">+</button>
-                    </div>
+                </div>
 
-                    <button class="cart-button" onclick="addCart()">
-                        🛒 เพิ่มลงตะกร้า
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
                     </button>
 
-                    <button class="buy-button">
-                        ซื้อเลย
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
                     </button>
 
                 </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
             </div>
 
 
-            <!-- สินค้า 2 -->
-            <div class="product-card">
 
-                <div class="product-image">
-                    <img src="images/product2.jpg" alt="กระเป๋า">
-                </div>
+            <!-- ==================================================
+                 เสื้อผ้า 2
+            =================================================== -->
 
-                <div class="product-info">
+            <div class="product-card"
+                data-category="clothes">
 
-                    <h3>กระเป๋าแฟชั่น</h3>
+                <img
+                    src="./css/im/s1.jpg"
+                    alt="เสื้อแฟชั่นสีขาว">
 
-                    <div class="rating">
-                        ⭐⭐⭐⭐☆
-                    </div>
+                <h3>
+                   
+                </h3>
 
-                    <p class="price">฿490</p>
+                <p class="price">
+                    ฿3,500
+                </p>
 
-                    <p class="option-title">เลือกสี</p>
 
-                    <div class="colors">
-                        <span class="color brown"></span>
-                        <span class="color black"></span>
-                    </div>
+                <div class="product-option">
 
-                    <p class="option-title">เลือกจำนวน</p>
+                    <label>
+                        ไซซ์
+                    </label>
 
-                    <div class="quantity">
-                        <button onclick="minus(this)">−</button>
-                        <span>1</span>
-                        <button onclick="plus(this)">+</button>
-                    </div>
+                    <select>
 
-                    <button class="cart-button" onclick="addCart()">
-                        🛒 เพิ่มลงตะกร้า
-                    </button>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
 
-                    <button class="buy-button">
-                        ซื้อเลย
-                    </button>
+                    </select>
 
                 </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
             </div>
 
 
-            <!-- สินค้า 3 -->
-            <div class="product-card">
 
-                <div class="product-image">
-                    <img src="images/product3.jpg" alt="รองเท้า">
+            <!-- ==================================================
+                 เสื้อผ้า 3
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="clothes">
+
+                <img
+                    src="./css/im/f2.jpg"
+                    alt="เสื้อแฟชั่นชมพู">
+
+                <h3>
+                    เสื้อแฟชั่นชมพู
+                </h3>
+
+                <p class="price">
+                    ฿3,990
+                </p>
+
+
+                <div class="product-option">
+
+                    
+
                 </div>
 
-                <div class="product-info">
 
-                    <h3>รองเท้าแฟชั่น</h3>
+                <div class="product-option">
 
-                    <div class="rating">
-                        ⭐⭐⭐⭐⭐
-                    </div>
+                    <label>
+                        ไซซ์
+                    </label>
 
-                    <p class="price">฿890</p>
+                    <select>
 
-                    <p class="option-title">เลือกไซซ์</p>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
 
-                    <select class="size">
+                    </select>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 กระเป๋า 1
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="bag">
+
+                <img
+                    src="./css/im/d1.jpg"
+                    alt="กระเป๋าแฟชั่น">
+
+                <h3>
+                    
+                </h3>
+
+                <p class="price">
+                    ฿990
+                </p>
+
+
+                <div class="product-option">
+
+                    
+
+                    </select>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 กระเป๋า 2
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="bag">
+
+                <img
+                    src="./css/im/s3.jpg"
+                    alt="กระเป๋าสะพาย">
+
+                <h3>
+                    
+                </h3>
+
+                <p class="price">
+                    ฿1590
+                </p>
+
+
+                <div class="product-option">
+
+                    
+                    </select>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 กระเป๋า 3
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="bag">
+
+                <img
+                 src="./css/im/f3.jpg"
+                    alt="กระเป๋าถือ">
+
+                
+
+                <p class="price">
+                    ฿1650
+                </p>
+
+
+                <div class="product-option">
+
+                   
+                    </select>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 รองเท้า 1
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="shoes">
+
+                <img
+                    src="./css/im/d3.jpg"
+                    alt="รองเท้าแฟชั่น">
+
+                
+
+                <p class="price">
+                    ฿1890
+                </p>
+
+
+                <div class="product-option">
+
+                    <label>
+                        ไซซ์
+                    </label>
+
+                    <select>
+
                         <option>36</option>
                         <option>37</option>
                         <option>38</option>
                         <option>39</option>
                         <option>40</option>
+
                     </select>
 
-                    <div class="quantity">
-                        <button onclick="minus(this)">−</button>
-                        <span>1</span>
-                        <button onclick="plus(this)">+</button>
-                    </div>
+                </div>
 
-                    <button class="cart-button" onclick="addCart()">
-                        🛒 เพิ่มลงตะกร้า
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
                     </button>
 
-                    <button class="buy-button">
-                        ซื้อเลย
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
                     </button>
 
                 </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
             </div>
 
 
-            <!-- สินค้า 4 -->
-            <div class="product-card">
 
-                <div class="product-image">
-                    <img src="images/product4.jpg" alt="หมวก">
-                </div>
+            <!-- ==================================================
+                 รองเท้า 2
+            =================================================== -->
 
-                <div class="product-info">
+            <div class="product-card"
+                data-category="shoes">
 
-                    <h3>หมวกแฟชั่น</h3>
+                <img
+                   src="./css/im/s4.jpg"    
+                    alt="รองเท้าผ้าใบ">
 
-                    <div class="rating">
-                        ⭐⭐⭐⭐☆
-                    </div>
+                
 
-                    <p class="price">฿250</p>
+                <p class="price">
+                    ฿1990
+                </p>
 
-                    <p class="option-title">เลือกสี</p>
 
-                    <div class="colors">
-                        <span class="color black"></span>
-                        <span class="color white"></span>
-                        <span class="color pink"></span>
-                    </div>
+                <div class="product-option">
 
-                    <div class="quantity">
-                        <button onclick="minus(this)">−</button>
-                        <span>1</span>
-                        <button onclick="plus(this)">+</button>
-                    </div>
+                    <label>
+                        ไซซ์
+                    </label>
 
-                    <button class="cart-button" onclick="addCart()">
-                        🛒 เพิ่มลงตะกร้า
-                    </button>
+                    <select>
 
-                    <button class="buy-button">
-                        ซื้อเลย
-                    </button>
+                        <option>36</option>
+                        <option>37</option>
+                        <option>38</option>
+                        <option>39</option>
+                        <option>40</option>
+
+                    </select>
 
                 </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
             </div>
+
+
+
+            <!-- ==================================================
+                 รองเท้า 3
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="shoes">
+
+                <img
+                    src="./css/im/f1.jpg" 
+                    alt="รองเท้าลำลอง">
+
+               
+                <p class="price">
+                    ฿1750
+                </p>
+
+
+                <div class="product-option">
+
+                    <label>
+                        ไซซ์
+                    </label>
+
+                    <select>
+
+                        <option>36</option>
+                        <option>37</option>
+                        <option>38</option>
+                        <option>39</option>
+                        <option>40</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 เครื่องประดับ 1
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="accessories">
+
+                <img
+                   src="./css/im/d4.jpg" 
+                    alt="เครื่องประดับ">
+
+                
+
+                <p class="price">
+                    ฿1,250
+                </p>
+
+
+                <div class="product-option">
+
+                    <label>
+                        สี
+                    </label>
+
+                    <select>
+
+                        <option>ทอง</option>
+                        <option>เงิน</option>
+                        <option>ชมพู</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 เครื่องประดับ 2
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="accessories">
+
+                <img
+                    src="./css/im/s2.jpg" 
+                    alt="สร้อยคอ">
+
+               
+                <p class="price">
+                    ฿1,300
+                </p>
+
+
+                <div class="product-option">
+
+                    <label>
+                        สี
+                    </label>
+
+                    <select>
+
+                        <option>ทอง</option>
+                        <option>เงิน</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 เครื่องประดับ 3
+            =================================================== -->
+
+            <div class="product-card"
+                data-category="accessories">
+
+                <img
+                    src="./css/im/f4.jpg" 
+                    alt="กำไลแฟชั่น">
+
+                
+
+                <p class="price">
+                    ฿499
+                </p>
+
+
+                <div class="product-option">
+
+                    <label>
+                        สี
+                    </label>
+
+                    <select>
+
+                        <option>ทอง</option>
+                        <option>เงิน</option>
+                        <option>ชมพู</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="quantity">
+
+                    <button onclick="minus(this)">
+                        −
+                    </button>
+
+                    <span>
+                        1
+                    </span>
+
+                    <button onclick="plus(this)">
+                        +
+                    </button>
+
+                </div>
+
+
+                <button
+                    class="add-cart"
+                    onclick="addCart()">
+
+                    เพิ่มลงรถเข็น
+
+                </button>
+
+            </div>
+
 
         </div>
 
     </main>
 
 
+
+    <!-- =========================
+         ปุ่มด้านล่าง
+    ========================== -->
+
+    <div class="bottom-buttons">
+
+
+        <div class="bottom-top">
+
+
+            <button
+                class="back-button"
+                onclick="history.back()">
+
+                ← ย้อนกลับ
+
+            </button>
+
+
+
+            <button
+                class="next-button"
+                onclick="nextCategory()">
+
+                ถัดไป →
+
+            </button>
+
+
+        </div>
+
+
+
+       <button
+    class="payment-button"
+    onclick="window.location.href='pay.html'">
+
+     Pay Pay
+
+</button>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+
+    <div id="footer"></div>
+
+
+
     <!-- =========================
          JavaScript
     ========================== -->
 
-   
+    <script src="js/shop.js"></script>
+
+    <script src="js/memu.js"></script>
+
 
 </body>
-</html>
 
-<script src="js/shop.js"></script>
-<script src="js/memu.js"></script>
-<script src="js/bn.js"></script>
+</html>

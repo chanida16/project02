@@ -59,12 +59,11 @@
             rgba(0, 0, 0, 0.30),
             rgba(0, 0, 0, 0.30)
         ),
-        url("images/banner1.jpg");
+        url("im/pic01.gif");
 
     background-size: cover;
     background-position: center;
 }
-
 
 .slide:nth-child(2) {
     background-image:
@@ -72,7 +71,7 @@
             rgba(0, 0, 0, 0.30),
             rgba(0, 0, 0, 0.30)
         ),
-        url("images/banner2.jpg");
+        url("im/pic02.gif");
 
     background-size: cover;
     background-position: center;
@@ -85,7 +84,7 @@
             rgba(0, 0, 0, 0.30),
             rgba(0, 0, 0, 0.30)
         ),
-        url("images/banner3.jpg");
+        url("im/pic03.gif");
 
     background-size: cover;
     background-position: center;

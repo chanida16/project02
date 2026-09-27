@@ -1,55 +1,73 @@
-
-/* =========================
-   ตั้งค่าพื้นฐาน
-========================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
+    margin: 0;
+
+    background-image: url("../css/im/bc06.gif");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    min-height: 100vh;
+
     font-family: Arial, sans-serif;
-    background: #f8f5f2;
-    color: #333;
 }
-
-
 /* =========================
-   ส่วนหัวร้านค้า
+   รถเข็น
 ========================= */
-
-.shop-header {
-    background: white;
-    padding: 20px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-}
-
-.shop-title h1 {
-    font-size: 30px;
-    color: #b85c5c;
-}
-
-.shop-title p {
-    color: #777;
-    margin-top: 5px;
-}
 
 .cart {
-    font-size: 25px;
+    position: absolute;
+
+    right: 50px;
+    top: 90px;
+
+    font-size: 24px;
+
     cursor: pointer;
 }
 
 #cart-count {
-    background: #b85c5c;
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
+
+    background: #ff6f91;
+
     color: white;
+
     border-radius: 50%;
-    padding: 4px 9px;
+
     font-size: 14px;
+}
+
+
+/* =========================
+   หัวข้อ
+========================= */
+
+.shop-title {
+
+    text-align: center;
+
+    margin-top: 75px;
+
+    margin-bottom: 25px;
+}
+
+.shop-title h2 {
+
+    font-size: 32px;
+
+    margin: 0;
 }
 
 
@@ -58,27 +76,53 @@ body {
 ========================= */
 
 .categories {
+
     display: flex;
+
     justify-content: center;
+    align-items: center;
+
     gap: 15px;
-    padding: 25px;
+
+    margin-bottom: 40px;
+
     flex-wrap: wrap;
 }
 
+
 .category {
-    border: none;
-    background: white;
+
     padding: 12px 25px;
+
+    background: #eeeeee;
+
+    color: #222;
+
     border-radius: 25px;
+
+    border: none;
+
     cursor: pointer;
-    font-size: 15px;
+
+    font-size: 16px;
+
     transition: 0.3s;
 }
 
-.category:hover,
+
+.category:hover {
+
+    background: #dddddd;
+
+}
+
+
 .category.active {
-    background: #b85c5c;
+
+    background: #333333;
+
     color: white;
+
 }
 
 
@@ -87,44 +131,64 @@ body {
 ========================= */
 
 .shop-container {
-    width: 86%;
-    max-width: 1300px;
-    margin: auto;
-    padding-bottom: 60px;
-}
 
-.shop-container h2 {
-    margin-bottom: 25px;
-    font-size: 28px;
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: auto;
 }
 
 
 /* =========================
-   Grid สินค้า
+   ตารางสินค้า 12 ช่อง
 ========================= */
 
 .product-grid {
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 25px;
+
 }
 
 
 /* =========================
-   การ์ดสินค้า
+   กล่องสินค้า
 ========================= */
 
 .product-card {
+
     background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 4px 15px
+        rgba(0, 0, 0, 0.1);
+
     transition: 0.3s;
+
 }
 
+
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.15);
+
 }
 
 
@@ -132,102 +196,78 @@ body {
    รูปสินค้า
 ========================= */
 
-.product-image {
-    width: 100%;
-    height: 260px;
-    background: #eee;
-    overflow: hidden;
-}
+.product-card img {
 
-.product-image img {
     width: 100%;
-    height: 100%;
+
+    height: 220px;
+
     object-fit: cover;
-    transition: 0.4s;
-}
 
-.product-card:hover img {
-    transform: scale(1.06);
+    border-radius: 10px;
+
+    display: block;
+
 }
 
 
 /* =========================
-   รายละเอียดสินค้า
+   ชื่อสินค้า
 ========================= */
 
-.product-info {
-    padding: 18px;
+.product-card h3 {
+
+    margin: 15px 0 5px;
+
+    font-size: 20px;
+
 }
 
-.product-info h3 {
-    font-size: 19px;
-    margin-bottom: 8px;
-}
 
-.rating {
-    font-size: 14px;
-    margin-bottom: 8px;
-}
+/* =========================
+   ราคา
+========================= */
 
 .price {
-    font-size: 22px;
+
+    font-size: 20px;
+
     font-weight: bold;
-    color: #b85c5c;
+
     margin-bottom: 15px;
+
 }
 
 
 /* =========================
-   ตัวเลือกสินค้า
+   ตัวเลือก
 ========================= */
 
-.option-title {
-    font-size: 14px;
-    margin: 8px 0;
-    font-weight: bold;
+.product-option {
+
+    margin: 10px 0;
+
 }
 
-.colors {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 12px;
+
+.product-option label {
+
+    margin-right: 5px;
+
 }
 
-.color {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 2px solid #ddd;
-    cursor: pointer;
-}
 
-.black {
-    background: #222;
-}
+.product-option select {
 
-.white {
+    padding: 6px 10px;
+
+    border:
+        1px solid #ddd;
+
+    border-radius: 6px;
+
     background: white;
-}
 
-.pink {
-    background: pink;
-}
-
-.brown {
-    background: #8b5e3c;
-}
-
-
-/* =========================
-   เลือกไซซ์
-========================= */
-
-.size {
-    width: 100%;
-    padding: 9px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 12px;
 }
 
 
@@ -236,91 +276,289 @@ body {
 ========================= */
 
 .quantity {
+
     display: flex;
-    align-items: center;
+
     justify-content: center;
-    gap: 18px;
-    margin: 12px 0;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 15px 0;
+
 }
+
 
 .quantity button {
-    width: 30px;
-    height: 30px;
+
+    width: 32px;
+
+    height: 32px;
+
     border: none;
+
     border-radius: 50%;
-    background: #eee;
+
+    background: #eeeeee;
+
     cursor: pointer;
+
     font-size: 18px;
+
 }
 
-.quantity span {
-    font-weight: bold;
+
+.quantity button:hover {
+
+    background: #dddddd;
+
 }
 
 
 /* =========================
-   ปุ่ม
+   ปุ่มเพิ่มรถเข็น
 ========================= */
 
-.cart-button,
-.buy-button {
+.add-cart {
+
     width: 100%;
-    padding: 12px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    margin-top: 8px;
-    transition: 0.3s;
-}
 
-.cart-button {
-    border: 2px solid #b85c5c;
-    background: white;
-    color: #b85c5c;
-}
+    padding: 11px;
 
-.cart-button:hover {
-    background: #b85c5c;
-    color: white;
-}
-
-.buy-button {
     border: none;
-    background: #b85c5c;
+
+    border-radius: 8px;
+
+    background: #333333;
+
     color: white;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
 }
 
-.buy-button:hover {
-    background: #963f3f;
+
+.add-cart:hover {
+
+    background: #555555;
+
 }
 
 
 /* =========================
-   Responsive
+   ปุ่มด้านล่าง
+========================= */
+
+.bottom-buttons {
+
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 60px auto 50px;
+
+    text-align: center;
+
+}
+
+
+.bottom-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =========================
+   ปุ่มย้อนกลับ
+========================= */
+
+.back-button {
+
+    padding: 15px 40px;
+
+    min-width: 180px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #555555;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+/* =========================
+   ปุ่มถัดไป
+========================= */
+
+.next-button {
+
+    padding: 12px 30px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #333333;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+/* =========================
+   ปุ่มชำระเงิน
+========================= */
+
+.payment-button {
+
+    padding: 14px 50px;
+
+    min-width: 220px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #333333;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+/* =========================
+   Hover
+========================= */
+
+.back-button:hover,
+.next-button:hover,
+.payment-button:hover {
+
+    opacity: 0.8;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================
+   หน้าจอขนาดกลาง
 ========================= */
 
 @media (max-width: 1000px) {
 
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
     }
 
 }
 
 
-@media (max-width: 600px) {
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 750px) {
 
     .product-grid {
-        grid-template-columns: 1fr;
-    }
 
-    .shop-header {
-        padding: 18px;
-    }
+        grid-template-columns:
+            repeat(2, 1fr);
 
-    .shop-container {
-        width: 92%;
     }
 
 }
 
+
+/* =========================
+   มือถือ
+========================= */
+
+@media (max-width: 500px) {
+
+    .product-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .cart {
+
+        right: 20px;
+
+    }
+
+
+    .bottom-top {
+
+        gap: 10px;
+
+    }
+
+
+    .back-button {
+
+        min-width: 140px;
+
+        padding: 12px 20px;
+
+        font-size: 16px;
+
+    }
+
+
+    .next-button {
+
+        padding: 10px 20px;
+
+    }
+
+
+    .payment-button {
+
+        width: 100%;
+
+    }
+
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pay Pay</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pay.css">
+</head>
+
+<body>
+
+    <!-- เมนู -->
+    <div id="menu-container"></div>
+
+
+    <main class="pay-container">
+
+        <!-- หัวข้อ -->
+        <div class="pay-title">
+            <h1>Pay Pay</h1>
+            <p>เลือกวิธีการชำระเงิน</p>
+        </div>
+
+
+        <!-- กล่องชำระเงิน -->
+        <div class="payment-box">
+
+            <h2>PAYMENT</h2>
+
+            <p class="payment-text">
+                กรุณาเลือกช่องทางการชำระเงิน
+            </p>
+
+
+            <!-- วิธีชำระเงิน -->
+
+            <div class="payment-options">
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="cash">
+
+                    <span class="payment-icon">
+                        
+                    </span>
+
+                    <span>
+                        เงินสด
+                    </span>
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="card">
+
+                    <span class="payment-icon">
+                        
+                    </span>
+
+                    <span>
+                        บัตรเครดิต / เดบิต
+                    </span>
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="wallet">
+
+                    <span class="payment-icon">
+                        
+                    </span>
+
+                    <span>
+                        E-Wallet
+                    </span>
+
+                </label>
+
+
+                <label class="payment-option">
+
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="qr">
+
+                    <span class="payment-icon">
+                        
+                    </span>
+
+                    <span>
+                        QR Payment
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <!-- ข้อมูลผู้สั่ง -->
+
+            <h3 class="section-title">
+                ข้อมูลการสั่งซื้อ
+            </h3>
+
+
+            <label>
+                ชื่อ
+            </label>
+
+            <input
+                type="text"
+                id="customer-name"
+                placeholder="กรอกชื่อ">
+
+
+            <label>
+                เบอร์โทรศัพท์
+            </label>
+
+            <input
+                type="text"
+                id="customer-phone"
+                placeholder="กรอกเบอร์โทรศัพท์">
+
+
+            <label>
+                ที่อยู่จัดส่ง
+            </label>
+
+            <textarea
+                id="customer-address"
+                rows="4"
+                placeholder="กรอกที่อยู่สำหรับจัดส่ง"></textarea>
+
+
+            <!-- ยอดรวม -->
+
+            <div class="total-box">
+
+                <span>
+                    Total
+                </span>
+
+                <strong>
+                    ฿0
+                </strong>
+
+            </div>
+
+
+            <!-- ปุ่ม -->
+
+            <button
+                class="pay-button"
+                onclick="confirmPayment()">
+
+                 PAY NOW
+
+            </button>
+
+
+            <button
+                class="back-button"
+                onclick="history.back()">
+
+                back
+
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <div id="footer"></div>
+
+
+    <script src="js/pay.js"></script>
+    <script src="js/memu.js"></script>
+
+</body>
+
+</html>
