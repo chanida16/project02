@@ -1,0 +1,326 @@
+
+/* =========================
+   ตั้งค่าพื้นฐาน
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5f2;
+    color: #333;
+}
+
+
+/* =========================
+   ส่วนหัวร้านค้า
+========================= */
+
+.shop-header {
+    background: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+}
+
+.shop-title h1 {
+    font-size: 30px;
+    color: #b85c5c;
+}
+
+.shop-title p {
+    color: #777;
+    margin-top: 5px;
+}
+
+.cart {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#cart-count {
+    background: #b85c5c;
+    color: white;
+    border-radius: 50%;
+    padding: 4px 9px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   หมวดหมู่
+========================= */
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px;
+    flex-wrap: wrap;
+}
+
+.category {
+    border: none;
+    background: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.category:hover,
+.category.active {
+    background: #b85c5c;
+    color: white;
+}
+
+
+/* =========================
+   พื้นที่สินค้า
+========================= */
+
+.shop-container {
+    width: 86%;
+    max-width: 1300px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+.shop-container h2 {
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+
+/* =========================
+   Grid สินค้า
+========================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================
+   การ์ดสินค้า
+========================= */
+
+.product-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+
+/* =========================
+   รูปสินค้า
+========================= */
+
+.product-image {
+    width: 100%;
+    height: 260px;
+    background: #eee;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.product-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   รายละเอียดสินค้า
+========================= */
+
+.product-info {
+    padding: 18px;
+}
+
+.product-info h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.rating {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #b85c5c;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   ตัวเลือกสินค้า
+========================= */
+
+.option-title {
+    font-size: 14px;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.colors {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+
+.black {
+    background: #222;
+}
+
+.white {
+    background: white;
+}
+
+.pink {
+    background: pink;
+}
+
+.brown {
+    background: #8b5e3c;
+}
+
+
+/* =========================
+   เลือกไซซ์
+========================= */
+
+.size {
+    width: 100%;
+    padding: 9px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   จำนวนสินค้า
+========================= */
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    margin: 12px 0;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: #eee;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.quantity span {
+    font-weight: bold;
+}
+
+
+/* =========================
+   ปุ่ม
+========================= */
+
+.cart-button,
+.buy-button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+.cart-button {
+    border: 2px solid #b85c5c;
+    background: white;
+    color: #b85c5c;
+}
+
+.cart-button:hover {
+    background: #b85c5c;
+    color: white;
+}
+
+.buy-button {
+    border: none;
+    background: #b85c5c;
+    color: white;
+}
+
+.buy-button:hover {
+    background: #963f3f;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1000px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shop-header {
+        padding: 18px;
+    }
+
+    .shop-container {
+        width: 92%;
+    }
+
+}
+

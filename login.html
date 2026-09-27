@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>เข้าสู่ระบบ | MY SHOP</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/loin.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <!-- ฝั่งซ้าย -->
+        <div class="login-image">
+
+            <div class="welcome">
+                <h1>MY SHOP</h1>
+                <p>ยินดีต้อนรับเข้าสู่ร้านค้าของเรา</p>
+            </div>
+
+        </div>
+
+
+        <!-- ฝั่งขวา -->
+        <div class="login-box">
+
+            <!-- =====================
+                 เข้าสู่ระบบ
+            ====================== -->
+
+            <div id="login-form">
+
+                <h2>เข้าสู่ระบบ</h2>
+
+                <p class="subtitle">
+                    เข้าสู่บัญชีของคุณ
+                </p>
+
+                <form>
+
+                    <label>อีเมล</label>
+                    <input
+                        type="email"
+                        placeholder="กรอกอีเมล"
+                        required
+                    >
+
+                    <label>รหัสผ่าน</label>
+                    <input
+                        type="password"
+                        placeholder="กรอกรหัสผ่าน"
+                        required
+                    >
+
+                    <div class="remember">
+
+                        <label>
+                            <input type="checkbox">
+                            จำฉันไว้
+                        </label>
+
+                        <a href="#">
+                            ลืมรหัสผ่าน?
+                        </a>
+
+                    </div>
+
+                    <button type="submit" class="main-button">
+                        เข้าสู่ระบบ
+                    </button>
+
+                </form>
+
+                <div class="line">
+                    <span>หรือ</span>
+                </div>
+
+                <p class="register-text">
+                    ยังไม่มีบัญชี?
+                    <a href="#" onclick="showRegister()">
+                        สมัครสมาชิก
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- =====================
+                 สมัครสมาชิก
+            ====================== -->
+
+            <div id="register-form">
+
+                <h2>สมัครสมาชิก</h2>
+
+                <p class="subtitle">
+                    สร้างบัญชีเพื่อเริ่มช้อปปิ้ง
+                </p>
+
+                <form>
+
+                    <label>ชื่อผู้ใช้</label>
+                    <input
+                        type="text"
+                        placeholder="กรอกชื่อผู้ใช้"
+                        required
+                    >
+
+                    <label>อีเมล</label>
+                    <input
+                        type="email"
+                        placeholder="กรอกอีเมล"
+                        required
+                    >
+
+                    <label>รหัสผ่าน</label>
+                    <input
+                        type="password"
+                        placeholder="สร้างรหัสผ่าน"
+                        required
+                    >
+
+                    <label>ยืนยันรหัสผ่าน</label>
+                    <input
+                        type="password"
+                        placeholder="กรอกรหัสผ่านอีกครั้ง"
+                        required
+                    >
+
+                    <button type="submit" class="main-button">
+                        สมัครสมาชิก
+                    </button>
+
+                </form>
+
+                <p class="register-text">
+                    มีบัญชีอยู่แล้ว?
+                    <a href="#" onclick="showLogin()">
+                        เข้าสู่ระบบ
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================
+         JavaScript
+    ====================== -->
+
+    <script>
+
+        function showRegister() {
+
+            document.getElementById("login-form").style.display = "none";
+
+            document.getElementById("register-form").style.display = "block";
+
+        }
+
+
+        function showLogin() {
+
+            document.getElementById("register-form").style.display = "none";
+
+            document.getElementById("login-form").style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+```

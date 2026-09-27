@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/banner.css">
+
+<style>
+
+  
+
+
+</style>
+
+</head>
+<body>
+    <div id="menu-container"></div>
+  
+<!-- =========================================
+     BANNER 3 SLIDES
+========================================= -->
+
+<section class="banner">
+
+    <!-- สไลด์ที่ 1 -->
+    <div class="slide active">
+
+        <div class="slide-content">
+
+            <p class="small-title">
+                DIGITAL EXPERIENCE
+            </p>
+
+            <h1>
+                CREATE YOUR<br>
+                DIGITAL WORLD
+            </h1>
+
+            <p class="description">
+                สร้างประสบการณ์ใหม่ให้กับแบรนด์
+                และทำให้ธุรกิจของคุณโดดเด่น
+            </p>
+
+            <a href="#" class="banner-button">
+                LEARN MORE
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- สไลด์ที่ 2 -->
+    <div class="slide">
+
+        <div class="slide-content">
+
+            <p class="small-title">
+                CREATIVE DESIGN
+            </p>
+
+            <h1>
+                DESIGN<br>
+                YOUR FUTURE
+            </h1>
+
+            <p class="description">
+                ออกแบบสิ่งใหม่ ๆ
+                ให้ตรงกับความต้องการของคุณ
+            </p>
+
+            <a href="#" class="banner-button">
+                VIEW WORK
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- สไลด์ที่ 3 -->
+    <div class="slide">
+
+        <div class="slide-content">
+
+            <p class="small-title">
+                OUR SERVICES
+            </p>
+
+            <h1>
+                BUILD<br>
+                SOMETHING AMAZING
+            </h1>
+
+            <p class="description">
+                เปลี่ยนไอเดียของคุณ
+                ให้กลายเป็นผลงานที่น่าสนใจ
+            </p>
+
+            <a href="#" class="banner-button">
+                CONTACT US
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ปุ่มเลื่อนซ้าย -->
+    <button class="prev" onclick="changeSlide(-1)">
+        &#10094;
+    </button>
+
+
+    <!-- ปุ่มเลื่อนขวา -->
+    <button class="next" onclick="changeSlide(1)">
+        &#10095;
+    </button>
+
+
+    <!-- จุดบอกจำนวนสไลด์ -->
+
+    <div class="dots">
+
+        <span class="dot active"
+              onclick="currentSlide(0)">
+        </span>
+
+        <span class="dot"
+              onclick="currentSlide(1)">
+        </span>
+
+        <span class="dot"
+              onclick="currentSlide(2)">
+        </span>
+
+    </div>
+
+</section>
+
+<div id="footer"></div>
+</body>
+</html>
+<script src="js/memu.js"></script>
+<script src="js/bn.js"></script>

@@ -1,0 +1,257 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ร้านค้า</title>
+
+    <!-- เชื่อม CSS -->
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ส่วนหัวร้านค้า
+    ========================== -->
+    <header class="shop-header">
+
+        <div class="shop-title">
+            <h1>MY SHOP</h1>
+            <p>เลือกสินค้าที่คุณชอบ</p>
+        </div>
+
+        <div class="cart">
+            🛒 <span id="cart-count">0</span>
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         หมวดหมู่สินค้า
+    ========================== -->
+    <nav class="categories">
+
+        <button class="category active">ทั้งหมด</button>
+        <button class="category">เสื้อผ้า</button>
+        <button class="category">กระเป๋า</button>
+        <button class="category">รองเท้า</button>
+        <button class="category">เครื่องประดับ</button>
+
+    </nav>
+
+
+    <!-- =========================
+         รายการสินค้า
+    ========================== -->
+    <main class="shop-container">
+
+        <h2>สินค้าแนะนำ</h2>
+
+        <div class="product-grid">
+
+
+            <!-- สินค้า 1 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <!-- เปลี่ยนชื่อรูปตรง src ได้เลย -->
+                    <img src="images/product1.jpg" alt="เสื้อแฟชั่น">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>เสื้อแฟชั่น</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="price">฿299</p>
+
+                    <p class="option-title">เลือกสี</p>
+
+                    <div class="colors">
+                        <span class="color black"></span>
+                        <span class="color white"></span>
+                        <span class="color pink"></span>
+                    </div>
+
+                    <p class="option-title">เลือกไซซ์</p>
+
+                    <select class="size">
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+
+                    <div class="quantity">
+                        <button onclick="minus(this)">−</button>
+                        <span>1</span>
+                        <button onclick="plus(this)">+</button>
+                    </div>
+
+                    <button class="cart-button" onclick="addCart()">
+                        🛒 เพิ่มลงตะกร้า
+                    </button>
+
+                    <button class="buy-button">
+                        ซื้อเลย
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- สินค้า 2 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/product2.jpg" alt="กระเป๋า">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>กระเป๋าแฟชั่น</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐☆
+                    </div>
+
+                    <p class="price">฿490</p>
+
+                    <p class="option-title">เลือกสี</p>
+
+                    <div class="colors">
+                        <span class="color brown"></span>
+                        <span class="color black"></span>
+                    </div>
+
+                    <p class="option-title">เลือกจำนวน</p>
+
+                    <div class="quantity">
+                        <button onclick="minus(this)">−</button>
+                        <span>1</span>
+                        <button onclick="plus(this)">+</button>
+                    </div>
+
+                    <button class="cart-button" onclick="addCart()">
+                        🛒 เพิ่มลงตะกร้า
+                    </button>
+
+                    <button class="buy-button">
+                        ซื้อเลย
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- สินค้า 3 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/product3.jpg" alt="รองเท้า">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>รองเท้าแฟชั่น</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="price">฿890</p>
+
+                    <p class="option-title">เลือกไซซ์</p>
+
+                    <select class="size">
+                        <option>36</option>
+                        <option>37</option>
+                        <option>38</option>
+                        <option>39</option>
+                        <option>40</option>
+                    </select>
+
+                    <div class="quantity">
+                        <button onclick="minus(this)">−</button>
+                        <span>1</span>
+                        <button onclick="plus(this)">+</button>
+                    </div>
+
+                    <button class="cart-button" onclick="addCart()">
+                        🛒 เพิ่มลงตะกร้า
+                    </button>
+
+                    <button class="buy-button">
+                        ซื้อเลย
+                    </button>
+
+                </div>
+            </div>
+
+
+            <!-- สินค้า 4 -->
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/product4.jpg" alt="หมวก">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>หมวกแฟชั่น</h3>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐☆
+                    </div>
+
+                    <p class="price">฿250</p>
+
+                    <p class="option-title">เลือกสี</p>
+
+                    <div class="colors">
+                        <span class="color black"></span>
+                        <span class="color white"></span>
+                        <span class="color pink"></span>
+                    </div>
+
+                    <div class="quantity">
+                        <button onclick="minus(this)">−</button>
+                        <span>1</span>
+                        <button onclick="plus(this)">+</button>
+                    </div>
+
+                    <button class="cart-button" onclick="addCart()">
+                        🛒 เพิ่มลงตะกร้า
+                    </button>
+
+                    <button class="buy-button">
+                        ซื้อเลย
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         JavaScript
+    ========================== -->
+
+   
+
+</body>
+</html>
+
+<script src="js/shop.js"></script>
+<script src="js/memu.js"></script>
+<script src="js/bn.js"></script>
